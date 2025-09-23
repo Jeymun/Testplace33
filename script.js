@@ -59,3 +59,112 @@ console.log("Max:", max);
 
 let average = suma / numeros.length;
 console.log("Average:", average);
+
+
+let min = numeros[0];
+
+for (let k = 1; k < numeros.length; k++) {
+  if (numeros[k] < min ) {
+    min = numeros[k];
+  }
+}
+
+console.log("Min:", min);
+
+
+let pares = 0;
+let impares = 0;
+
+
+for (let p = 0; p < numeros.length; p++) {
+  if (numeros[p] % 2 === 0) {
+    pares++;
+  }
+  else {
+    impares++;
+  }
+}
+
+console.log("Cantidad de pares", pares);
+console.log("Cantidad de impares", impares);
+
+
+let invertido = [];
+
+for (let a = numeros.length - 1; a >= 0; a--){
+  invertido.push(numeros[a]);
+}
+
+
+console.log("Array", numeros);
+console.log("Array Invertido", invertido);
+
+let suma2 = 0
+
+for (let b = 0; b < numeros.length; b++) {
+  if (numeros[b] > 50) {
+    suma2+= numeros[b];
+  }
+}
+
+console.log("Numeros mayores a 50", suma2);
+
+let palabras = ["Hola", "Mundo", "Vegeta"];
+let resultado = "";
+
+for (let l= 0; l < palabras.length; l++) {
+  resultado += palabras[l];
+}
+
+console.log("Resultado", resultado);
+
+let numeros2 = [65, 344, 666, 222, 5234, 5324, 5555, 4444];
+
+let suma3 = 0;
+let min2 = numeros2[0];
+let max2 = numeros2[0];
+let pares2 = 0;
+let impares2 = 0;
+
+for (let g = 0; g < numeros2.length; g++) {
+  suma3 += numeros2[g];
+
+  if (numeros2[g] > max) {
+    max2= numeros2[g];
+  }
+
+  if (numeros2[g] < min) {
+    min2 = numeros2[g];
+  }
+
+  if (numeros2[g] % 2 === 0) {
+    pares2++;
+  }
+    else {
+      impares2++;
+    }
+}
+
+
+let promedio2 = suma3 / numeros.length;
+
+let palabras2 = ["Kpop", "Demon", "Hunters"];
+
+let resultado2 = "";
+
+for (let v = 0; v < palabras2.length; v++ ){
+  resultado2 += palabras2[v] + " "; 
+}
+
+
+resultado2 = resultado2.trim(); // quita el último espacio extra
+console.log("Array de números:", numeros2);
+console.log("Suma:", suma3);
+console.log("Promedio:", promedio2);
+console.log("Máximo:", max2);
+console.log("Mínimo:", min2);
+console.log("Cantidad de pares:", pares2);
+console.log("Cantidad de impares:", impares2);
+
+console.log("Array de strings:", palabras2);
+console.log("Concatenado:", resultado2);
