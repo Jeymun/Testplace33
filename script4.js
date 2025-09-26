@@ -125,4 +125,4 @@ function mostrarListado() {
 // Uso
 console.log(buscarProducto("Mouse"));
 console.log("Total:", calcularTotal());
-mostrarListado();
+mostrarListado(); 
