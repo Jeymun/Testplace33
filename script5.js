@@ -24,3 +24,32 @@ for (let b = 0; b < carrito.length; b++){
 
 console.log("Productos", carrito);
 
+let total = 0;
+
+for(let cc = 0; cc < carrito.length; cc++){
+  total += carrito[cc].precio * carrito[cc].cantidad;
+}
+
+console.log("Total de carrito", total);
+
+
+let masStock = carrito[0];
+
+for(let dd = 0; dd < carrito.length; dd++){
+  if (carrito[dd].cantidad > masStock.cantidad) {
+    masStock = carrito[dd];
+  }
+}
+
+console.log("Producto con Mas Stock", masStock);
+
+let ordenados = [...carrito]; // copiamos para no modificar el original
+
+ordenados.sort(function(c, d) {
+  return c.precio - d.precio;
+});
+
+console.log("Ordenados por precio:");
+for (let e = 0; e < ordenados.length; e++) {
+  console.log(ordenados[e].nombre, "- $" + ordenados[e].precio);
+}
