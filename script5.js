@@ -43,7 +43,7 @@ for(let dd = 0; dd < carrito.length; dd++){
 
 console.log("Producto con Mas Stock", masStock);
 
-let ordenados = [...carrito]; // copiamos para no modificar el original
+let ordenados = [...carrito];
 
 ordenados.sort(function(c, d) {
   return c.precio - d.precio;
