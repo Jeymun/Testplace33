@@ -47,3 +47,20 @@ console.log("Buscar Mouse:", carrito.buscarProducto("Mouse"));
 carrito.mostrarBaratos();
 console.log("Asc:", carrito.ordenarPorPrecio(false));
 console.log("Desc:", carrito.ordenarPorPrecio(true));
+
+
+agregarProducto: function(nuevo) {
+  // Buscar si ya existe el producto
+  for (let z = 0; z < this.productos.length; z++) {
+    if (this.productos[z].nombre === nuevo.nombre) {
+      // Si existe, solo sumamos la cantidad
+      this.productos[z].cantidad += nuevo.cantidad;
+      console.log("Cantidad actualizada de:", nuevo.nombre);
+      return; // salimos de la función
+    }
+  }
+
+  // Si no existe, lo agregamos al array
+  this.productos.push(nuevo);
+  console.log("Producto agregado:", nuevo.nombre);
+}
