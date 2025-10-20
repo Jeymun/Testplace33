@@ -6,7 +6,6 @@ let personas = [
   { nombre: "Pedro", edad: 25 }
 ];
 
-
 function resumenEdades(lista) {
   let total = lista.length;
   let mayores = lista.filter(p => p.edad >= 18);
@@ -20,4 +19,20 @@ function resumenEdades(lista) {
   console.log("📊 Promedio de edad:", promedio.toFixed(1));
 }
 
-resumenEdades(personas);
+// 🔹 Nueva función para agregar personas desde el teclado
+function agregarPersona(lista) {
+  let nombre = prompt("Ingrese el nombre:");
+  let edad = parseInt(prompt("Ingrese la edad:"), 10);
+
+  if (!nombre || isNaN(edad)) {
+    console.log("❌ Datos inválidos. Intenta de nuevo.");
+    return;
+  }
+
+  lista.push({ nombre, edad });
+  console.log(`✅ Persona agregada: ${nombre} (${edad} años)`);
+}
+
+// 🧩 Ejemplo de uso:
+agregarPersona(personas); // agrega una nueva persona
+resumenEdades(personas); // muestra el resumen actualizado
